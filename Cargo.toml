@@ -1,0 +1,19 @@
+[package]
+name = "frontend"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+yew = { git = "https://github.com/yewstack/yew/", features = ["csr"] }
+yewdux = { git = "https://github.com/intendednull/yewdux.git" }
+serde = { version = "1.0.137", features = ["derive"] }
+uuid = { version = "1.0.0", features = ["v4", "serde"] }
+indexmap = { version = "1.8.1", features = ["serde"] }
+getrandom = { version = "0.2.6", features = [ "js" ] }
+web-sys = "0.3.57"
+rand = "0.8.5"
+postcard = { version = "0.7.3", features = ["alloc"] }
+base64 = "0.13.0"
+gloo-dialogs = "0.1.1"

@@ -1,0 +1,216 @@
+/* === FONT DECLARATIONS === */
+@font-face {
+    font-family: charter;
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: normal;
+    src: url("charter_regular.woff2") format("woff2");
+}
+@font-face {
+    font-family: charter;
+    font-style: italic;
+    font-weight: 400;
+    font-stretch: normal;
+    src: url("charter_italic.woff2") format("woff2");
+}
+@font-face {
+    font-family: charter;
+    font-style: normal;
+    font-weight: 700;
+    font-stretch: normal;
+    src: url("charter_bold.woff2") format("woff2");
+}
+@font-face {
+    font-family: charter;
+    font-style: italic;
+    font-weight: 700;
+    font-stretch: normal;
+    src: url("charter_bold_italic.woff2") format("woff2");
+}
+
+/* === ANDY BELLS MODERN CSS RESET === */
+*,::after,::before{box-sizing:border-box}blockquote,body,dd,dl,figure,h1,h2,h3,h4,p{margin:0}ol[role=list],ul[role=list]{list-style:none}html:focus-within{scroll-behavior:smooth}body{min-height:100vh}a:not([class]){text-decoration-skip-ink:auto}img,picture{max-width:100%;display:block}button,input,select,textarea{font:inherit}@media (prefers-reduced-motion:reduce){html:focus-within{scroll-behavior:auto}*,::after,::before{animation-duration:0s!important;animation-iteration-count:1!important;transition-duration:0s!important;scroll-behavior:auto!important}}
+
+/* === FLUID TYPE SCALE === */
+/* @link https://utopia.fyi/type/calculator?c=320,15,1.125,1140,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+:root {
+    --step--2: clamp(0.74rem, calc(0.72rem + 0.12vw), 0.80rem);
+    --step--1: clamp(0.83rem, calc(0.77rem + 0.33vw), 1.00rem);
+    --step-0: clamp(0.94rem, calc(0.82rem + 0.61vw), 1.25rem);
+    --step-1: clamp(1.06rem, calc(0.86rem + 0.99vw), 1.56rem);
+    --step-2: clamp(1.19rem, calc(0.89rem + 1.50vw), 1.95rem);
+    --step-3: clamp(1.34rem, calc(0.90rem + 2.16vw), 2.44rem);
+    --step-4: clamp(1.50rem, calc(0.90rem + 3.02vw), 3.05rem);
+    --step-5: clamp(1.69rem, calc(0.86rem + 4.15vw), 3.82rem);
+}
+
+/* === FLUID SPACE SCALE === */
+/* @link https://utopia.fyi/space/calculator?c=320,15,1.2,1140,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,l-3xl */
+
+:root {
+    --space-3xs: clamp(0.25rem, calc(0.23rem + 0.12vw), 0.31rem);
+    --space-2xs: clamp(0.50rem, calc(0.45rem + 0.24vw), 0.63rem);
+    --space-xs: clamp(0.69rem, calc(0.59rem + 0.49vw), 0.94rem);
+    --space-s: clamp(0.94rem, calc(0.82rem + 0.61vw), 1.25rem);
+    --space-m: clamp(1.44rem, calc(1.27rem + 0.85vw), 1.88rem);
+    --space-l: clamp(1.88rem, calc(1.63rem + 1.22vw), 2.50rem);
+    --space-xl: clamp(2.81rem, calc(2.45rem + 1.83vw), 3.75rem);
+    --space-2xl: clamp(3.75rem, calc(3.26rem + 2.44vw), 5.00rem);
+    --space-3xl: clamp(5.63rem, calc(4.89rem + 3.66vw), 7.50rem);
+  
+    /* One-up pairs */
+    --space-3xs-2xs: clamp(0.25rem, calc(0.10rem + 0.73vw), 0.63rem);
+    --space-2xs-xs: clamp(0.50rem, calc(0.33rem + 0.85vw), 0.94rem);
+    --space-xs-s: clamp(0.69rem, calc(0.47rem + 1.10vw), 1.25rem);
+    --space-s-m: clamp(0.94rem, calc(0.57rem + 1.83vw), 1.88rem);
+    --space-m-l: clamp(1.44rem, calc(1.02rem + 2.07vw), 2.50rem);
+    --space-l-xl: clamp(1.88rem, calc(1.14rem + 3.66vw), 3.75rem);
+    --space-xl-2xl: clamp(2.81rem, calc(1.96rem + 4.27vw), 5.00rem);
+    --space-2xl-3xl: clamp(3.75rem, calc(2.29rem + 7.32vw), 7.50rem);
+  
+    /* Custom pairs */
+    --space-l-3xl: clamp(1.88rem, calc(-0.32rem + 10.98vw), 7.50rem);
+}
+
+/* === BASE TYPOGRAPHY === */
+html {
+    font-family: "charter", serif;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'kern' 1;
+    line-height: 1.5;
+}
+h1 {
+    font-size: var(--step-5);
+}
+h2 {
+    font-size: var(--step-4);
+}
+h3, .site-name {
+    font-size: var(--step-3);
+    font-weight: bold;
+}
+h4 {
+    font-size: var(--step-2);
+}
+h5, blockquote {
+    font-size: var(--step-1);
+}
+p {
+    font-size: var(--step-0);
+}
+code {
+    font-family: "source", monospace;
+    font-size: var(--step--1);
+}
+header {
+    font-family: "fira", sans-serif;
+}
+
+/* === COLOURS === */
+:root {
+    --neutral-0: hsl(0, 0%, 11%);
+    --neutral-90: hsl(0, 0%, 95%);
+    --accent-50: hsl(16, 93%, 56%);
+    --on-accent-50: var(--neutral-0);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --neutral-0: hsl(0, 0%, 95%);
+        --neutral-90: hsl(0, 0%, 11%);
+    }
+}
+
+html {
+    color: var(--neutral-0);
+    background-color: var(--neutral-90);
+}
+
+
+/* === LAYOUT & BLOCK === */
+body {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-l);
+    gap: var(--space-l);
+    max-width: 90ch;
+    margin: 0 auto;
+}
+button {
+    padding: var(--space-s);
+    font-size: var(--step-2);
+    cursor: pointer;
+
+    --button-background-color: var(--neutral-90);
+    --button-color: var(--neutral-0);
+    --button-border-color: var(--neutral-0);
+
+    background-color: var(--button-background-color);
+    color: var(--button-color);
+    border: 3px solid var(--button-border-color);
+
+    transition: all 50ms ease-in-out;
+}
+button.primary {
+    --button-border-color: var(--accent-50);
+}
+button:not([disabled]):where(:hover, :focus-within, :active) {
+     --button-background-color: var(--neutral-0);
+     --button-color: var(--neutral-90);
+     outline: none;
+}
+button[disabled] {
+    --button-border-color: var(--neutral-0);
+    text-decoration: line-through;
+    cursor: unset;
+}
+
+
+input {
+    --input-background-color: var(--neutral-90);
+    --input-border-color: var(--neutral-0);
+    --input-color: var(--neutral-0);
+
+    background-color: var(--input-background-color);
+    border: none;
+    padding: var(--space-xs);
+    border-bottom: 3px solid var(--input-border-color);
+    color: var(--input-color);
+    font-size: var(--step-1);
+    transition: all 50ms ease-in-out;
+}
+input:not([disabled]):where(:hover, :focus-within, :active) {
+    --input-background-color: var(--neutral-0);
+    --input-color: var(--neutral-90);
+}
+
+
+.character-input {
+    display: flex;
+}
+.character-input > input {
+    flex-grow: 1;
+}
+.character-input > button {
+    padding: var(--space-xs);
+}
+
+.character-export-code {
+    word-wrap: break-word;
+    word-break: break-all;
+    border: 3px solid white;
+    padding: var(--space-s);
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* === UTILITIES === */
+.font-lg {
+    font-size: var(--step-1);
+}
+.warning {
+    font-weight: bold;
+    font-size: var(--step-1);
+}
