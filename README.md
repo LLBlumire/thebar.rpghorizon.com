@@ -12,6 +12,8 @@ https://thebar.rpghorizon.com
 
 <u>Part of the RPG Horizon project.</u>
 
+<hr/>
+
 </div>
 
 A website for randomly selecting characters to play in improv scenarios.
