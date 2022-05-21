@@ -2,7 +2,7 @@
 
 # The Bar
 
-![](src/assets/icon.svg)
+<img src="src/assets/icon.svg" width="200px">
 
 <h2>
 
