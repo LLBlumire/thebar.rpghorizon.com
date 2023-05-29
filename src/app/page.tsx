@@ -12,10 +12,11 @@ export default function Home() {
         time.
       </p>
       <Link className="primary button" href="/play">
-        {"Quick Play (Offline)"}
+        Quick Play (Offline)
       </Link>
-      <button className="button">{"Transfer Characters"}</button>
-      <button className="button">{"Import Legacy Characters"}</button>
+      <Link className="button" href="/import">
+        Import Legacy Characters
+      </Link>
     </>
   );
 }
