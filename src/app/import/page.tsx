@@ -10,7 +10,7 @@ export default function Page() {
   const [charactersLoaded, setCharactersLoaded] = useState<boolean>(false);
   useEffect(() => {
     const data = JSON.parse(
-      window.localStorage.getItem(localStorageKey) ?? "{characters:[]}"
+      window.localStorage.getItem(localStorageKey) ?? '{"characters":[]}'
     );
     setCharacters(new Map(Object.entries(data["characters"] ?? {})));
     setCharactersLoaded(true);
