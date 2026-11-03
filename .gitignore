@@ -33,3 +33,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Operator credentials, OpenTofu working files and saved plans
+.env.local
+.terraform/
+*.tfplan
+*.tfstate*
